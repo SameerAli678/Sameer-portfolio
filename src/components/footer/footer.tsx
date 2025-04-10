@@ -1,0 +1,36 @@
+import Image from "next/image";
+import React from "react";
+import LatsTalk from "@/../public/Images/LatsTalk.png";
+import Arrow from "@/../public/icons/Arrow.svg";
+
+const Footer = () => {
+  return (
+    <div className="grid bg-primary m-3 rounded-3xl">
+      {/* 1st section */}
+      <div className="flex sm:flex-row flex-col justify-between px-9 py-6 gap-6 text-white">
+        <div className="text-xl italic font-normal">SAMEER ALI</div>
+        <div className="flex gap-x-2 text-md items-center">
+          <p>Github</p>
+          <Image src={Arrow} alt="Arrow" />
+        </div>
+      </div>
+      {/* 2nd section */}
+      <div className="grid gap-9 p-4">
+        <h1 className="grid sm:text-center items-center text-white text-5xl">
+          Interested in <br />
+          working together?
+        </h1>
+        <div className="flex sm:text-center sm:justify-center">
+          <Image src={LatsTalk} alt="LatsTalk" width={150} height={100} />
+        </div>
+      </div>
+      {/* 3rd section */}
+      <div className="flex sm:flex-row flex-col justify-between px-9 py-6 gap-6 text-white">
+        <p>©2025 – All Rights Reserved</p>
+        <p>Front end Developer</p>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
