@@ -1,14 +1,16 @@
+import Footer from "@/components/footer/footer";
+import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Charm, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const charm = Charm({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--charm",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
@@ -23,11 +25,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${charm.variable}`}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.className} bg-black p-5 text-white antialiased`}
+        suppressHydrationWarning
       >
-        {children}
+        <Navbar />
+        <div className="flex flex-col gap-y-6">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

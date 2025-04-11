@@ -1,14 +1,15 @@
 "use client";
+import About from "@/components/about";
 import ProjectCard from "@/components/cards/project-card";
-import Footer from "@/components/footer/footer";
-import HeroSection from "@/components/herosection/herosection";
+import Hero from "@/components/hero";
 import { ProjectCardData } from "@/constant/project-card-data";
+import { Fragment } from "react";
 
 export default function Home() {
   return (
-    <div className="grid bg-background">
-      <Footer />
-      <HeroSection />
+    <Fragment>
+      <Hero />
+      <About />
       {ProjectCardData.map((item, i) => (
         <ProjectCard
           key={i}
@@ -20,6 +21,6 @@ export default function Home() {
           link={item.link}
         />
       ))}
-    </div>
+    </Fragment>
   );
 }
