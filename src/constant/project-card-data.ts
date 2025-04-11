@@ -7,7 +7,6 @@ export const ProjectCardData = [
     text: "e-commerce web site",
     Paragraph:
       "Sansa is an e-commerce site showcasing my web development and UX skills, featuring a modern design and secure payments.",
-    isWhite: true,
     link: "https://sansa-shopping-app.vercel.app/",
   },
   {
@@ -16,7 +15,7 @@ export const ProjectCardData = [
     text: "Best project",
     Paragraph:
       "This is a complete Front-End haiger engineer Website Created by Next.js And Tailwind",
-    isWhite: false,
+    isWhite: true,
     link: "https://haiger.vercel.app/",
   },
   {
@@ -25,6 +24,5 @@ export const ProjectCardData = [
     Paragraph:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
     heading: "Korba",
-    isWhite: true,
   },
 ];
