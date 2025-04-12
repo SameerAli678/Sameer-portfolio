@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import blackArrow from "@/../public/icons/blackArrow.svg";
 import Arrow from "@/../public/icons/Arrow.svg";
@@ -7,6 +6,7 @@ import Button from "../button/button";
 import { ProjectCardInterface } from "@/interfaces/project-card-interface";
 import SimpleButton from "../button/simple-button";
 import Link from "next/link";
+import { ChipData } from "@/constant/chips-data";
 
 const ProjectCard = ({
   text,
@@ -20,8 +20,10 @@ const ProjectCard = ({
   return (
     <div
       className={`${
-        isWhite ? `flex bg-white text-black` : `flex bg-primary text-white`
-      }flex flex-col md:flex-row justify-between p-3 sm:p-6 rounded-3xl sm:m-3 gap-8 
+        isWhite
+          ? `flex bg-[url('/images/card-white.png')] bg-cover text-black`
+          : `flex bg-[url('/images/card-primary.png')] bg-cover text-white`
+      }flex flex-col md:flex-row justify-between p-3 sm:p-6 rounded-3xl gap-8 lg:h-[500px] bg-cover
         ${className}`}
     >
       {/* 1st section */}
@@ -35,18 +37,13 @@ const ProjectCard = ({
           <p className="text-xl">{text}</p>
           <h1 className="flex text-3xl font-semibold">{heading}</h1>
           <div className="flex gap-x-4">
-            {isWhite ? (
-              <SimpleButton text="development" isWhite />
-            ) : (
-              <SimpleButton text="development" />
-            )}
-            <button
-              className={`flex border p-3 rounded-3xl items-center justify-center w-fit h-9 text-lg border-black ${
-                isWhite ? `border-black` : `border-white`
-              }`}
-            >
-              development
-            </button>
+            {isWhite
+              ? ChipData.map((item, i) => {
+                  return <SimpleButton text={item.name} key={i} isWhite />;
+                })
+              : ChipData.map((item, i) => {
+                  return <SimpleButton text={item.name} key={i} />;
+                })}
           </div>
         </div>
         {/* view button */}
@@ -55,14 +52,14 @@ const ProjectCard = ({
           <Link href={link || ""} target="_blank">
             {isWhite ? (
               <Button
-                text="see case study"
+                text="Live review"
                 isOutline
                 icon={blackArrow}
                 className=" flex items-center"
               />
             ) : (
               <Button
-                text="see case study"
+                text="Live review"
                 icon={Arrow}
                 className=" flex items-center"
               />
@@ -72,13 +69,12 @@ const ProjectCard = ({
       </div>
       {/* 2nd end image section */}
       <div className="order-1 md:order-2">
-        <Image
-          src={icon || ""}
-          alt="image"
-          width={400}
-          height={300}
-          className="flex w-full h-full max-w-xl max-h-sm"
-        />
+        <Link href={link || ""} target="_blank">
+          <iframe
+            src={icon || ""}
+            className="flex h-full rounded-xl bg-white-darkWhite"
+          />
+        </Link>
       </div>
     </div>
   );
