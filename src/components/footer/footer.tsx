@@ -5,10 +5,10 @@ import Arrow from "@/../public/icons/Arrow.svg";
 
 const Footer = () => {
   return (
-    <div className="grid bg-primary m-3 rounded-3xl">
+    <div className="grid bg-primary rounded-3xl">
       {/* 1st section */}
       <div className="flex sm:flex-row flex-col justify-between px-9 py-6 gap-6 text-white">
-        <div className="text-xl italic font-normal">SAMEER ALI</div>
+        <div className="text-2xl font-charm">Sameer Ali</div>
         <div className="flex gap-x-2 text-md items-center">
           <p>Github</p>
           <Image src={Arrow} alt="Arrow" />

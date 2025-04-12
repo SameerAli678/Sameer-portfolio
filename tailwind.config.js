@@ -14,9 +14,10 @@ module.exports = {
       },
       colors: {
         primary: { DEFAULT: "#1E0044", Normal: "#8338EC" },
-        white: "#E9DEFF",
+        white: { DEFAULT: "#E9DEFF", darkWhite: "#FFFFFF" },
         black: "#0B001A",
         pink: "#B923FF",
+        background: "#0B001A",
       },
     },
   },
