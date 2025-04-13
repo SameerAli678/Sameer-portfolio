@@ -1,26 +1,32 @@
 "use client";
 import About from "@/components/about";
-import ProjectCard from "@/components/cards/project-card";
-import ContactUs from "@/components/contact-us/contact-us";
-import Hero from "@/components/hero";
+import ProjectCard from "@/components/project-card";
+import ContactUs from "@/components/contact";
+import HeroSection from "@/components/hero-section";
 import Skills from "@/components/skills";
 
 import { ProjectCardData } from "@/constant/project-card-data";
 
 export default function Home() {
   return (
-    <div className="grid bg-background gap-y-6">
-      <Hero />
+    <div className="flex flex-col bg-background gap-y-3">
+      {/* hero section */}
+      <HeroSection />
 
+      {/* About */}
       <About />
 
-      <ContactUs />
-      <div id="projects" className="grid gap-y-6 scroll-my-5">
+      {/* ProjectCard */}
+      <div id="projects" className="gap-y-6 scroll-my-5">
         {ProjectCardData.map((item, i) => (
           <ProjectCard key={i} {...item} paragraph={item.Paragraph} />
         ))}
       </div>
 
+      {/* ContactUs */}
+      <ContactUs />
+
+      {/* Skills */}
       <Skills />
     </div>
   );

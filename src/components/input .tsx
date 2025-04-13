@@ -36,7 +36,7 @@ const Input = ({
 
   return (
     // Label
-    <label htmlFor="input" className="space-y-1 ">
+    <label htmlFor="input" className="space-y-1">
       {label && (
         <p className="text-secondary-700 text-sm font-normal capitalize line-clamp-1">
           {label}
@@ -49,7 +49,7 @@ const Input = ({
           "w-full h-11",
           "bg-white",
           "border !border-border",
-          "rounded-lg shadow-box-shadow",
+          "rounded-md shadow-box-shadow",
           "pr-3",
           "flex justify-between items-center",
           className,
@@ -60,7 +60,7 @@ const Input = ({
         <input
           type={type === "password" ? (isVisible ? "text" : "password") : type}
           id="input"
-          className="w-full h-full px-3 py-2 outline-none ring-0 rounded-xl"
+          className="w-full h-full px-3 py-2 outline-none ring-0 rounded-md"
           {...res}
         />
         {type === "password" && (

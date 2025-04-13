@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TextAnimation from "./text-animation";
 
-const Hero = () => {
+const HeroSection = () => {
   return (
     <div className="bg-primary flex flex-col justify-between rounded-b-[20px] p-10 min-h-[600px]">
       <div />
@@ -49,4 +49,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;

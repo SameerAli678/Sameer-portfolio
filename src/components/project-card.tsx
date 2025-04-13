@@ -2,7 +2,7 @@
 import blackArrow from "@/../public/icons/blackArrow.svg";
 import { ProjectCardInterface } from "@/interfaces/project-card-interface";
 import Link from "next/link";
-import Button from "../button/button";
+import Button from "./button/button";
 
 const ProjectCard = ({
   title,
@@ -20,11 +20,11 @@ const ProjectCard = ({
         isWhite
           ? `bg-[url('/images/card-white.png')] text-black`
           : `bg-[url('/images/card-primary.png')] text-white`
-      } flex flex-col lg:flex-row justify-between p-3 sm:p-6 rounded-3xl gap-8 lg:h-[500px] bg-cover ${className}`}
+      } flex flex-col md:flex-row justify-between p-3 sm:p-6 rounded-3xl gap-8 lg:h-[500px] bg-cover ${className}`}
     >
       {/* 1st section */}
       <div
-        className={`flex flex-col justify-between w-full max-w-lg lg:order-1 order-2 gap-y-6 ${
+        className={`flex flex-col justify-between w-full max-w-lg md:order-1 order-2 gap-y-6 ${
           isWhite ? `text-black` : `text-white`
         }`}
       >
@@ -32,14 +32,14 @@ const ProjectCard = ({
         <div className="grid gap-y-3">
           <p className="text-xl">{title}</p>
           <h1 className="flex text-3xl font-semibold">{heading}</h1>
-          <div className="flex gap-x-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 w-fit gap-4">
             {tags.map((item, i) => {
               return (
                 <div
                   key={i}
                   className={`${
                     isWhite ? "bg-primary text-white" : "bg-white text-black"
-                  } rounded-full px-4 py-1`}
+                  } rounded-full px-4 py-1 justify-center flex`}
                 >
                   {item}
                 </div>

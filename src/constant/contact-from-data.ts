@@ -4,12 +4,12 @@ export const ContactFormData = [
   {
     type: "text",
     placeholder: "your good Name",
-    label: "first Name",
+    label: "First Name",
     name: "firstName",
   },
   {
     type: "text",
-    placeholder: "last Name",
+    placeholder: "Last Name",
     label: "Last Name",
     name: "lastName",
   },
@@ -19,4 +19,10 @@ export const ContactFormData = [
     label: "Email address",
     name: "email",
   },
+  // {
+  //   type: "text",
+  //   placeholder: "Your Company Name",
+  //   label: "Company Name",
+  //   name: "CompanyName",
+  // },
 ];
