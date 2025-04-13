@@ -4,7 +4,6 @@ import Navbar from "@/components/navbar";
 // import type { Metadata } from "next";
 import { Charm, Montserrat } from "next/font/google";
 import "./globals.css";
-import Hero from "@/components/hero";
 
 const charm = Charm({
   subsets: ["latin"],
@@ -33,7 +32,6 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Navbar />
-        <Hero />
 
         <div className="flex flex-col gap-y-6">
           {children}
