@@ -2,11 +2,12 @@
 
 // interfaces Export
 export interface ProjectCardInterface {
-  text: string;
+  title: string;
   isWhite?: boolean;
   className?: string;
-  icon: string;
+  projectUrl: string;
   heading: string;
   paragraph: string;
-  link?: string;
+  link: string;
+  tags: string[];
 }
