@@ -11,7 +11,7 @@ const Navbar = () => {
       <Link href={"#top"} className="text-2xl font-charm">
         Sameer Ali
       </Link>
-      <div className="hidden md:flex items-center gap-5">
+      <div className="hidden md:flex items-center gap-x-5">
         {navItems.map((item) => (
           <p key={item.title} className="relative font-medium text-sm group">
             <Link href={item.href}>{item.title}</Link>
