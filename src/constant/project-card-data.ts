@@ -3,20 +3,22 @@
 
 export const ProjectCardData = [
   {
-    icon: "https://sansa-shopping-app.vercel.app/",
+    projectUrl: "https://sansa-shopping-app.vercel.app/",
     heading: "Sansa Project",
-    text: "e-commerce web site",
+    title: "E-Commerce",
     Paragraph:
-      "Sansa is an e-commerce site showcasing my web development and UX skills, featuring a modern design and secure payments.",
+      "A stylish shopping web app with seamless navigation and dynamic product displays.",
     link: "https://sansa-shopping-app.vercel.app/",
+    tags: ["Next,js", "Tailwind", "TypeScript"],
   },
   {
-    icon: "https://haiger.vercel.app/",
-    heading: "haiger engineer",
-    text: "Best project",
+    projectUrl: "https://haiger.vercel.app/",
+    heading: "Haiger Engineering",
+    title: "Company Website",
     Paragraph:
-      "This is a complete Front-End haiger engineer Website Created by Next.js And Tailwind",
+      "A professional company profile showcasing engineering expertise with a clean UI.",
     isWhite: true,
     link: "https://haiger.vercel.app/",
+    tags: ["Next,js", "Tailwind", "TypeScript"],
   },
 ];
