@@ -6,9 +6,9 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="bg-primary flex flex-col gap-y-6 rounded-[20px] p-10 max-w-fit overflow-x-hidden"
+      className="bg-primary flex flex-col gap-y-9 rounded-[20px] p-10 max-w-fit overflow-x-hidden items-center"
     >
-      <h2 className="text-2xl font-medium">My Skills</h2>
+      <h2 className="text-4xl font-medium">My Skills</h2>
 
       <Marquee gradient gradientWidth={200} autoFill gradientColor="#1e0044">
         <div className="flex gap-20 items-center pl-20">
