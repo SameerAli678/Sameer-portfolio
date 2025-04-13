@@ -9,10 +9,14 @@ const Footer = () => {
       {/* 1st section */}
       <div className="flex sm:flex-row flex-col justify-between px-9 py-6 gap-6 text-white">
         <div className="text-2xl font-charm">Sameer Ali</div>
-        <div className="flex gap-x-2 text-md items-center">
+        <a
+          href="https://github.com/SameerAli678"
+          className="flex gap-x-2 text-md items-center cursor-pointer border-2"
+          target="_blank"
+        >
           <p>Github</p>
           <Image src={Arrow} alt="Arrow" />
-        </div>
+        </a>
       </div>
       {/* 2nd section */}
       <div className="grid gap-9 p-4">

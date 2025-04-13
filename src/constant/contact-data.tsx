@@ -2,20 +2,20 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
 
-export const ProjectCardData = [
+export const ContactData = [
   {
     icon: <FaPhoneAlt />,
     heading: "Call us",
-    text: "",
-  },
-  {
-    icon: <MdEmail />,
-    heading: "E-mail us",
-    text: "Best project",
+    text: "+92 315 126 5238",
   },
   {
     icon: <MdLocationPin />,
     heading: "Location",
-    text: "case study",
+    text: "Orangi Town karachi ",
+  },
+  {
+    icon: <MdEmail />,
+    heading: "E-mail us",
+    text: "alikhansameer234@gmail.com",
   },
 ];
