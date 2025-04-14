@@ -13,10 +13,12 @@ const Button = ({
   className,
   icon,
   text,
+  loading,
 }: ButtonInterface) => {
   return (
     // button
     <button
+      disabled={loading}
       type={type}
       onClick={onClick}
       className={`${

@@ -7,5 +7,6 @@ export interface ButtonInterface {
   className?: string;
   icon?: string;
   onClick?: () => void | string | object;
-  type?: 'submit' | 'button';
+  type?: "submit" | "button";
+  loading?: boolean;
 }
