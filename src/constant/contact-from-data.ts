@@ -19,10 +19,4 @@ export const ContactFormData = [
     label: "Email address",
     name: "email",
   },
-  // {
-  //   type: "text",
-  //   placeholder: "Your Company Name",
-  //   label: "Company Name",
-  //   name: "CompanyName",
-  // },
 ];

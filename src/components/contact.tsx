@@ -1,11 +1,55 @@
 import { ContactData } from "@/constant/contact-data";
 import { ContactFormData } from "@/constant/contact-from-data";
-import React from "react";
+import React, { useState } from "react";
 import Input from "./input ";
 import Button from "./button/button";
 import Arrow from "@/../public/icons/Arrow.svg";
+import { ContactSchema } from "@/schema/contactSchema";
+import { useFormik } from "formik";
+import toast from "react-hot-toast";
 
+const initialValues = {
+  firstName: "",
+  email: "",
+  lastName: "",
+  message: "",
+};
 const ContactUs = () => {
+  const [isPending, setIsPending] = useState<boolean>(false);
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema: ContactSchema,
+    onSubmit: async (values) => {
+      setIsPending(true);
+      try {
+        const response = await fetch("/api/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
+
+        await response.json();
+
+        resetForm();
+
+        if (response.ok) toast.success("Email sent successfully!");
+        else toast.error("Failed to send email. Please try again.");
+
+        setIsPending(false);
+      } catch (error) {
+        console.error("Error:", error);
+        toast.error("An error occurred. Please try again.");
+        setIsPending(false);
+      }
+    },
+  });
+
+  const { values, errors, handleSubmit, handleChange, touched, resetForm } =
+    formik;
+
   return (
     <div className="flex flex-col justify-around gap-y-9 items-center p-2 rounded-2xl border border-primary-Normal">
       {/* 1st section */}
@@ -43,7 +87,14 @@ const ContactUs = () => {
               key={i}
               className={`${item.type == "email" ? `md:!col-span-2` : ``}`}
             >
-              <Input {...item} className={`flex text-gray-700 w-full`} />
+              <Input
+                {...item}
+                value={values[item.name as keyof typeof values]}
+                error={errors[item.name as keyof typeof errors]}
+                touched={touched[item.name as keyof typeof touched]}
+                onChange={handleChange}
+                className={`flex text-gray-700 w-full`}
+              />
             </div>
           ))}
         </div>
@@ -52,6 +103,8 @@ const ContactUs = () => {
             Send us a message
           </label>
           <textarea
+            value={values.message}
+            onChange={handleChange}
             id="message"
             name="message"
             className="w-full bg-white-darkWhite rounded-lg border border-gray-300 focus:border-primary focus:ring-2 p-2
@@ -59,7 +112,12 @@ const ContactUs = () => {
           ></textarea>
         </div>
         <div>
-          <Button text="Send Massage" icon={Arrow} />
+          <Button
+            text="Send Message"
+            icon={Arrow}
+            onClick={handleSubmit}
+            loading={isPending}
+          />
         </div>
       </div>
     </div>

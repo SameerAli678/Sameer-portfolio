@@ -1,6 +1,7 @@
 "use client";
 import { navItems } from "@/constant/nav-items";
 import Link from "next/link";
+// import Arrow from "@/../public/icons/Arrow.svg";
 
 const Navbar = () => {
   return (
@@ -23,6 +24,8 @@ const Navbar = () => {
           </p>
         ))}
       </div>
+      {/* icon={Arrow} */}
+      {/* <Button text="cv" /> */}
       <p>Let&#39;s Talk</p>
     </nav>
   );
