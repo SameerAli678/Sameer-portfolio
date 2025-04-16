@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Size  */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e9deff;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8338EC;
+}
 html {
   scroll-behavior: smooth;
 }

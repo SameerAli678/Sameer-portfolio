@@ -1,13 +1,14 @@
 "use client";
 import { navItems } from "@/constant/nav-items";
 import Link from "next/link";
-// import Arrow from "@/../public/icons/Arrow.svg";
+import Arrow from "@/../public/icons/Arrow.svg";
+import Button from "./button/button";
 
 const Navbar = () => {
   return (
     <nav
       id="top"
-      className="text-white bg-primary rounded-t-[20px] p-5 flex justify-between items-center"
+      className="text-white bg-primary rounded-t-[20px] p-5 flex flex-col sm:flex-row justify-start sm:justify-between sm:items-center gap-y-5"
     >
       <Link href={"#top"} className="text-2xl font-charm">
         Sameer Ali
@@ -24,9 +25,11 @@ const Navbar = () => {
           </p>
         ))}
       </div>
-      {/* icon={Arrow} */}
-      {/* <Button text="cv" /> */}
-      <p>Let&#39;s Talk</p>
+      <a href="/cv/Sameer-ali-cv.pdf" download>
+        <Button text="Sameer Ali CV" icon={Arrow} />
+      </a>
+
+      {/* <p>Let&#39;s Talk</p> */}
     </nav>
   );
 };

@@ -5,9 +5,7 @@
 import { cn } from "@/lib/cn-utils";
 
 // React import
-import React, { Fragment, useState } from "react";
-// import { useTranslation } from 'react-i18next';
-import { FiEye, FiEyeOff } from "react-icons/fi";
+import React from "react";
 
 // Use interface InputProps
 interface InputProps {
@@ -25,14 +23,8 @@ const Input = ({
   className,
   ...res
 }: React.InputHTMLAttributes<HTMLInputElement> & InputProps) => {
-  // State
-  const [isVisible, setIsVisible] = useState(false);
-
   // is Error
   const isError = error && touched;
-
-  // Translation
-  // const { t } = useTranslation();
 
   return (
     // Label
@@ -50,7 +42,6 @@ const Input = ({
           "bg-white",
           "border !border-border",
           "rounded-md shadow-box-shadow",
-          "pr-3",
           "flex justify-between items-center",
           className,
           isError && "!border-red-400"
@@ -58,29 +49,11 @@ const Input = ({
       >
         {/* Input  */}
         <input
-          type={type === "password" ? (isVisible ? "text" : "password") : type}
+          type={type}
           id="input"
-          className="w-full h-full px-3 py-2 outline-none ring-0 rounded-md"
+          className="w-full h-full px-3 py-2 outline-none  rounded-md"
           {...res}
         />
-        {type === "password" && (
-          // Fragment
-          <Fragment>
-            {isVisible ? (
-              <FiEye
-                size={24}
-                onClick={() => setIsVisible(!isVisible)}
-                className="cursor-pointer text-secondary-300"
-              />
-            ) : (
-              <FiEyeOff
-                size={24}
-                onClick={() => setIsVisible(!isVisible)}
-                className="cursor-pointer text-secondary-300"
-              />
-            )}
-          </Fragment>
-        )}
       </div>
       {/* Error  */}
       {isError && <p className="text-red-600 text-xs">{error}</p>}
