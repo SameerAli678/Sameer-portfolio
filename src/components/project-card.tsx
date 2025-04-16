@@ -1,5 +1,6 @@
 "use client";
 import blackArrow from "@/../public/icons/blackArrow.svg";
+import Arrow from "@/../public/icons/Arrow.svg";
 import { ProjectCardInterface } from "@/interfaces/project-card-interface";
 import Link from "next/link";
 import Button from "./button/button";
@@ -51,18 +52,26 @@ const ProjectCard = ({
         <div className="grid gap-6">
           <p>{paragraph}</p>
           <Link href={link} target="_blank">
-            <Button
-              text="Live review"
-              isOutline={isWhite}
-              icon={blackArrow}
-              className="flex items-center"
-            />
+            {isWhite ? (
+              <Button
+                text="Live review"
+                isOutline={isWhite}
+                icon={blackArrow}
+                className="flex items-center"
+              />
+            ) : (
+              <Button
+                text="Live review"
+                icon={Arrow}
+                className="flex items-center"
+              />
+            )}
           </Link>
         </div>
       </div>
 
       {/* 2nd end image section */}
-      <div className="order-1 lg:order-2 w-full lg:max-w-[660px] min-h-[500px] lg:min-h-0">
+      <div className="order-1 lg:order-2 w-full lg:max-w-[660px] min-h-[500px] lg:min-h-0 ">
         <div className="flex justify-end h-full">
           <iframe
             src={projectUrl}

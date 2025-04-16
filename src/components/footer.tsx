@@ -34,8 +34,8 @@ const Footer = () => {
       </div>
       {/* 3rd section */}
       <div className="flex sm:flex-row flex-col justify-between px-9 py-6 gap-6 text-white">
-        <p>©2025 – All Rights Reserved</p>
         <p>Front end Developer</p>
+        <p>©2025 – All Rights Reserved</p>
       </div>
     </div>
   );

@@ -51,7 +51,10 @@ const ContactUs = () => {
     formik;
 
   return (
-    <div className="flex flex-col justify-around gap-y-9 items-center p-2 rounded-2xl border border-primary-Normal">
+    <div
+      id="contact"
+      className="flex flex-col justify-around gap-y-9 items-center p-2 rounded-2xl border border-primary-Normal"
+    >
       {/* 1st section */}
       <div className="flex flex-col justify-around items-center gap-y-3 py-6">
         <h1 className="text-primary-Normal text-5xl">Contact Us</h1>
@@ -80,8 +83,8 @@ const ContactUs = () => {
 
       {/* 3rd section */}
 
-      <div className="grid grid-cols-1 bg-white text-black w-full max-w-3xl sm:p-5 rounded-3xl gap-y-3 p-2 m-0">
-        <div className="grid grid-cols-2 gap-y-3">
+      <div className="grid grid-cols-1 bg-white text-black w-full max-w-3xl sm:p-5 rounded-3xl gap-y-3 p-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {ContactFormData.map((item, i) => (
             <div
               key={i}
@@ -93,7 +96,6 @@ const ContactUs = () => {
                 error={errors[item.name as keyof typeof errors]}
                 touched={touched[item.name as keyof typeof touched]}
                 onChange={handleChange}
-                className={`flex text-gray-700 w-full`}
               />
             </div>
           ))}

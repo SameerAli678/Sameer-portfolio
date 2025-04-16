@@ -16,7 +16,7 @@ export const ContactFormData = [
   {
     type: "email",
     placeholder: "Email Address",
-    label: "Email address",
+    label: "Email Address",
     name: "email",
   },
 ];
