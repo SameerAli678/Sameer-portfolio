@@ -4,7 +4,7 @@ import TextAnimation from "./text-animation";
 
 const HeroSection = () => {
   return (
-    <div className="bg-primary flex flex-col justify-between rounded-b-[20px] p-10 min-h-[600px]">
+    <div className="bg-primary flex flex-col justify-between rounded-b-[20px] p-7 md:p-10 min-h-[600px]">
       <div />
       <div className="flex flex-col gap-4">
         <h1 className="text-white text-4xl md:text-6xl lg:text-8xl font-medium">
