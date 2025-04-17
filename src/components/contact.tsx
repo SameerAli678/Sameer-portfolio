@@ -1,5 +1,4 @@
 import { ContactData } from "@/constant/contact-data";
-import React from "react";
 import ContactFrom from "./contact-from";
 
 const ContactUs = () => {
@@ -11,7 +10,7 @@ const ContactUs = () => {
       {/* 1st section */}
       <div className="flex flex-col justify-around items-center gap-y-3 py-6">
         <h1 className="text-primary-Normal text-5xl">Contact Us</h1>
-        <p className="text-center ">
+        <p className="text-center">
           Have a question or need assistance? We are here to help you every step
           of the way. Get in touch with us and lets build something amazing
           together.
