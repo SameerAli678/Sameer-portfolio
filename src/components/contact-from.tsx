@@ -1,11 +1,11 @@
+import Arrow from "@/../public/icons/Arrow.svg";
 import { ContactFormData } from "@/constant/contact-from-data";
-import React, { useState } from "react";
-import Input from "./input ";
-import Button from "./button/button";
 import { ContactSchema } from "@/schema/contactSchema";
 import { useFormik } from "formik";
+import { useState } from "react";
 import toast from "react-hot-toast";
-import Arrow from "@/../public/icons/Arrow.svg";
+import Button from "./button/button";
+import Input from "./input ";
 
 const initialValues = {
   firstName: "",
@@ -76,7 +76,7 @@ const ContactFrom = () => {
           id="message"
           name="message"
           className="w-full bg-white-darkWhite rounded-lg border border-gray-300 focus:border-primary focus:ring-2 p-2
-         focus:ring-indigo-200 h-32 text-base outline-none text-gray-700  resize-none leading-6 transition-colors duration-200 ease-in-out"
+         focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 resize-none leading-6 transition-colors duration-200 ease-in-out"
         ></textarea>
       </div>
       <div>

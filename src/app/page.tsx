@@ -17,7 +17,7 @@ export default function Home() {
       <About />
 
       {/* ProjectCard */}
-      <div id="projects" className="gap-y-6 ">
+      <div id="projects" className="gap-y-6">
         {ProjectCardData.map((item, i) => (
           <ProjectCard key={i} {...item} paragraph={item.Paragraph} />
         ))}

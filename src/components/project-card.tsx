@@ -1,6 +1,6 @@
 "use client";
-import blackArrow from "@/../public/icons/blackArrow.svg";
 import Arrow from "@/../public/icons/Arrow.svg";
+import blackArrow from "@/../public/icons/blackArrow.svg";
 import { ProjectCardInterface } from "@/interfaces/project-card-interface";
 import Link from "next/link";
 import Button from "./button/button";
@@ -71,7 +71,7 @@ const ProjectCard = ({
       </div>
 
       {/* 2nd end image section */}
-      <div className="order-1 lg:order-2 w-full lg:max-w-[660px] min-h-[500px] lg:min-h-0 ">
+      <div className="order-1 lg:order-2 w-full lg:max-w-[660px] min-h-[500px] lg:min-h-0">
         <div className="flex justify-end h-full">
           <iframe
             src={projectUrl}

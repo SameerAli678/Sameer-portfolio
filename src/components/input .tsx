@@ -51,7 +51,7 @@ const Input = ({
         <input
           type={type}
           id="input"
-          className="w-full h-full px-3 py-2 outline-none  rounded-md"
+          className="w-full h-full px-3 py-2 outline-none rounded-md"
           {...res}
         />
       </div>
