@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import { Charm, Montserrat } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const charm = Charm({
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Navbar />
 
         <div className="flex flex-col gap-y-6">
+          <Toaster />
           {children}
           <Footer />
         </div>
