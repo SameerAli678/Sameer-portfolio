@@ -5,7 +5,7 @@ const ContactUs = () => {
   return (
     <div
       id="contact"
-      className="flex flex-col justify-around gap-y-9 items-center p-2 rounded-2xl"
+      className="flex flex-col justify-around gap-y-9 items-center p-2 rounded-2xl border-primary-Normal bg-primary py-9"
     >
       {/* 1st section */}
       <div className="flex flex-col justify-around items-center gap-y-3 py-6">
@@ -39,4 +39,3 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
-// border-primary-Normal
