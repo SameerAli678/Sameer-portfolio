@@ -10,7 +10,7 @@ const Skills = () => {
     >
       <h2 className="text-4xl font-medium">My Skills</h2>
 
-      <Marquee gradient gradientWidth={200} autoFill gradientColor="#1e0044">
+      <Marquee gradient gradientWidth={200} autoFill gradientColor="#8338EC">
         <div className="flex gap-20 items-center pl-20">
           {categorizedData.map((item, index) => (
             <div

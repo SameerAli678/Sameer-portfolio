@@ -49,12 +49,14 @@ const ContactFrom = () => {
   const { values, errors, handleSubmit, handleChange, touched, resetForm } =
     formik;
   return (
-    <div className="grid grid-cols-1 bg-white text-black w-full max-w-3xl sm:p-5 rounded-3xl gap-y-3 px-2 py-6">
+    <div className="grid grid-cols-1 bg-white text-black w-full max-w-5xl sm:px-3 rounded-3xl gap-y-3 px-2 py-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {ContactFormData.map((item, i) => (
           <div
             key={i}
             className={`${item.type == "email" ? `md:!col-span-2` : ``}`}
+            data-aos="fade-down"
+            data-aos-delay={i * 500}
           >
             <Input
               {...item}
@@ -66,20 +68,23 @@ const ContactFrom = () => {
           </div>
         ))}
       </div>
-      <div className="mb-4">
+      <div className="mb-4" data-aos="zoom-out-right">
         <label htmlFor="message" className="leading-7 text-md">
           Send us a message
         </label>
         <textarea
           value={values.message}
           onChange={handleChange}
+          placeholder="Write a Message"
           id="message"
           name="message"
-          className="w-full bg-white-darkWhite rounded-lg border border-gray-300 focus:border-primary focus:ring-2 p-2
-         focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 resize-none leading-6 transition-colors duration-200 ease-in-out"
+          className={`w-full bg-white-darkWhite rounded-lg border border-gray-300 focus:border-primary focus:ring-2 p-2
+         focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 resize-none leading-6 transition-colors duration-200 ease-in-out ${
+           errors.message ? "border-red-500" : "border-gray-300"
+         }`}
         ></textarea>
       </div>
-      <div>
+      <div data-aos="flip-left">
         <Button
           text="Send Message"
           icon={Arrow}

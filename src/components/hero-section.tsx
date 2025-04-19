@@ -34,8 +34,8 @@ const HeroSection = () => {
         </p>
       </div>
       <div className="flex gap-4 justify-between items-end">
-        <p>Available for work</p>
-        <Link href="#about">
+        <p data-aos="zoom-in-right">Available for work</p>
+        <Link href="#about" data-aos="flip-right">
           <Image
             alt=""
             src="/icons/scroll-down.svg"

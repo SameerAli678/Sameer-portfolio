@@ -6,6 +6,10 @@ import { Charm, Montserrat } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
+// import AOS from "aos";
+import "aos/dist/aos.css";
+import AnimationLayout from "@/components/animation-layout";
+
 const charm = Charm({
   subsets: ["latin"],
   weight: "400",
@@ -31,15 +35,18 @@ export default function RootLayout({
     <html lang="en" className={`${charm.variable}`}>
       <body
         className={`${montserrat.className} bg-black p-3 text-white`}
+        data-aos-duration="2000"
         suppressHydrationWarning
       >
-        <Navbar />
+        <AnimationLayout>
+          <Navbar />
 
-        <div className="flex flex-col gap-y-6">
-          <Toaster />
-          {children}
-          <Footer />
-        </div>
+          <div className="flex flex-col gap-y-6">
+            <Toaster />
+            {children}
+            <Footer />
+          </div>
+        </AnimationLayout>
       </body>
     </html>
   );
