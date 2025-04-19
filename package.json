@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.17",
+    "aos": "^2.3.4",
+    "aos": "^3.x.x",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "next": "15.2.4",
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",

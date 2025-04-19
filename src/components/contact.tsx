@@ -9,8 +9,10 @@ const ContactUs = () => {
     >
       {/* 1st section */}
       <div className="flex flex-col justify-around items-center gap-y-3 py-6">
-        <h1 className="text-primary-Normal text-5xl">Contact Us</h1>
-        <p className="text-center">
+        <h1 className="text-primary-Normal text-5xl" data-aos="zoom-in">
+          Contact Us
+        </h1>
+        <p data-aos="fade-up" className="flex justify-center px-3">
           Have a question or need assistance? We are here to help you every step
           of the way. Get in touch with us and lets build something amazing
           together.
@@ -24,10 +26,19 @@ const ContactUs = () => {
             className="flex flex-col gap-y-3 justify-center text-center items-center"
           >
             <div className="flex w-14 h-14 bg-white rounded-full justify-center items-center text-black">
-              <div className="text-2xl">{item.icon}</div>
+              <div data-aos="zoom-in" className="text-2xl">
+                {item.icon}
+              </div>
             </div>
-            <h1 className="text-primary-Normal text-3xl">{item.heading}</h1>
-            <p className="text-md">{item.text}</p>
+            <h1
+              data-aos="zoom-in-left"
+              className="text-primary-Normal text-3xl"
+            >
+              {item.heading}
+            </h1>
+            <p data-aos="zoom-in-right" className="text-md">
+              {item.text}
+            </p>
           </div>
         ))}
       </div>

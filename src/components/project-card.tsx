@@ -31,12 +31,18 @@ const ProjectCard = ({
       >
         {/* heading section */}
         <div className="grid gap-y-3">
-          <p className="text-xl">{title}</p>
-          <h1 className="flex text-3xl font-semibold">{heading}</h1>
+          <p data-aos="zoom-in-right" className="text-xl">
+            {title}
+          </p>
+          <h1 data-aos="zoom-in-left" className="flex text-3xl font-semibold">
+            {heading}
+          </h1>
           <div className="grid grid-cols-2 sm:grid-cols-3 w-fit gap-4">
             {tags.map((item, i) => {
               return (
                 <div
+                  data-aos="fade-up"
+                  data-aos-delay={i * 500}
                   key={i}
                   className={`${
                     isWhite ? "bg-primary text-white" : "bg-white text-black"
@@ -50,8 +56,8 @@ const ProjectCard = ({
         </div>
         {/* view button */}
         <div className="grid gap-6">
-          <p>{paragraph}</p>
-          <Link href={link} target="_blank">
+          <p data-aos="fade-left">{paragraph}</p>
+          <Link href={link} target="_blank" data-aos="flip-left">
             {isWhite ? (
               <Button
                 text="Live review"

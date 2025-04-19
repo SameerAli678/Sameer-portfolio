@@ -6,8 +6,10 @@ const About = () => {
       id="about"
       className="bg-white text-primary flex flex-col gap-y-4 rounded-[20px] p-5 scroll-my-5"
     >
-      <h2 className="text-2xl font-medium">About Me</h2>
-      <p>
+      <h2 data-aos="fade-up" className="text-2xl font-medium">
+        About Me
+      </h2>
+      <p data-aos="zoom-out-left">
         I&#39;m a front-end web developer and designer passionate about crafting
         visually striking and user-friendly digital experiences. With a strong
         eye for design and a love for clean, efficient code, I bring ideas to
