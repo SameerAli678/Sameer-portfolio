@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.17",
-    "aos": "^3.x.x",
+    "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "next": "15.2.4",
