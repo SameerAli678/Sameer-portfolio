@@ -77,11 +77,11 @@ const ProjectCard = ({
       </div>
 
       {/* 2nd end image section */}
-      <div className="order-1 lg:order-2 w-full lg:max-w-[660px] min-h-[500px] lg:min-h-0">
+      <div className="order-1 lg:order-2 w-full lg:max-w-[660px]">
         <div className="flex justify-end h-full">
           <iframe
             src={projectUrl}
-            className="h-full shadow-lg w-full rounded-xl bg-white-darkWhite"
+            className="h-full shadow-lg w-full rounded-xl bg-white-darkWhite min-h-[500px] lg:min-h-fit"
           />
         </div>
       </div>
