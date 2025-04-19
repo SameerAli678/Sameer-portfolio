@@ -1,4 +1,4 @@
-import { categorizedData } from "@/constant/skills";
+import { categorizedData } from "@/constant/skills-categorized";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -10,7 +10,7 @@ const Skills = () => {
     >
       <h2 className="text-4xl font-medium">My Skills</h2>
 
-      <Marquee gradient gradientWidth={200} autoFill gradientColor="#8338EC">
+      <Marquee gradient gradientWidth={200} autoFill gradientColor="#1E0044">
         <div className="flex gap-20 items-center pl-20">
           {categorizedData.map((item, index) => (
             <div
