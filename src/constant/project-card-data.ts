@@ -20,7 +20,7 @@ export const ProjectCardData = [
   },
   {
     projectUrl: "https://sameerali678.github.io/Counter/",
-    heading: "Counter App ",
+    heading: "Counter App",
     title: "Application",
     Paragraph:
       "A simple and interactive counter app built using HTML, CSS, and JavaScript — with increment, decrement, and reset functionality.",
@@ -36,5 +36,14 @@ export const ProjectCardData = [
     isWhite: true,
     link: "https://sameerali678.github.io/Digital-Watch/",
     tags: ["Html", "Tailwind", "JavaScript"],
+  },
+  {
+    projectUrl: "https://sameerali678.github.io/Dapixel/",
+    heading: "Dapixel",
+    title: "Responsive Web site",
+    Paragraph:
+      "Dapixel is a modern and responsive digital agency website built with HTML and Tailwind CSS , It features a clean UI, smooth scrolling. Ideal for showcasing creative services or portfolio projects.",
+    link: "https://sameerali678.github.io/Dapixel/",
+    tags: ["Html", "Tailwind"],
   },
 ];

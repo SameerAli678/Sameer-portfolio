@@ -37,7 +37,7 @@ const ProjectCard = ({
           <h1 data-aos="zoom-in-left" className="flex text-3xl font-semibold">
             {heading}
           </h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 w-fit gap-4">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 w-fit">
             {tags.map((item, i) => {
               return (
                 <div
