@@ -4,32 +4,31 @@ import React from "react";
 import LatsTalk from "@/../public/Images/LatsTalk.png";
 import Arrow from "@/../public/icons/Arrow.svg";
 import Link from "next/link";
+import Button from "./button/button";
 
 const Footer = () => {
   return (
-    <div className="grid bg-primary rounded-3xl w-full">
+    <div className="grid w-full bg-primary rounded-3xl">
       {/* 1st section */}
-      <div className="flex sm:flex-row flex-col justify-between px-9 py-6 gap-6 text-white">
+      <div className="flex flex-col justify-between gap-6 py-6 text-white sm:flex-row px-9">
         <Link href={"#top"}>
           <div className="text-2xl font-charm" data-aos="fade-down-right">
             Sameer Ali
           </div>
         </Link>
-        <a
-          href="https://github.com/SameerAli678"
-          className="flex gap-x-2 text-md items-center cursor-pointer"
-          target="_blank"
-          data-aos="fade-down-left"
-        >
-          <p>Github</p>
-          <Image src={Arrow} alt="Arrow" />
-        </a>
+        <Button
+          text="Github"
+          onClick={() =>
+            window.open("https://github.com/SameerAli678", "_blank")
+          }
+          icon={Arrow}
+        />
       </div>
       {/* 2nd section */}
-      <div className="grid gap-9 p-4">
+      <div className="grid p-4 gap-9">
         <h1
           data-aos="fade-down"
-          className="grid sm:text-center items-center text-white text-5xl"
+          className="grid items-center text-5xl text-white sm:text-center"
         >
           Interested in <br />
           working together?
@@ -42,7 +41,7 @@ const Footer = () => {
         </div>
       </div>
       {/* 3rd section */}
-      <div className="flex sm:flex-row flex-col justify-between px-9 py-6 gap-6 text-white">
+      <div className="flex flex-col justify-between gap-6 py-6 text-white sm:flex-row px-9">
         <p data-aos="fade-up-right">Front end Developer</p>
         <p data-aos="fade-up-left">©2025 – All Rights Reserved</p>
       </div>

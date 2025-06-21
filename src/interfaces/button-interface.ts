@@ -6,7 +6,7 @@ export interface ButtonInterface {
   isOutline?: boolean;
   className?: string;
   icon?: string;
-  onClick?: () => void | string | object;
+  onClick?: () => void;
   type?: "submit" | "button";
   loading?: boolean;
 }
