@@ -14,13 +14,13 @@ const Navbar = () => {
       <Link href={"#top"} className="text-2xl font-charm" data-aos="zoom-in">
         Sameer Ali
       </Link>
-      <div className="hidden md:flex items-center gap-x-5">
+      <div className="items-center hidden md:flex gap-x-5">
         {navItems.map((item, index) => (
           <p
             key={item.title}
             data-aos="fade-up"
             data-aos-delay={index * 500}
-            className="relative font-medium text-sm group"
+            className="relative flex text-sm font-medium group"
           >
             <Link href={item.href}>{item.title}</Link>
             <span

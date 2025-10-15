@@ -46,4 +46,14 @@ export const ProjectCardData = [
     link: "https://sameerali678.github.io/Dapixel/",
     tags: ["Html", "Tailwind"],
   },
+  {
+    projectUrl: "https://trucks-services.vercel.app/",
+    heading: "Truck Services",
+    title: "Service Website",
+    Paragraph:
+      "A fully responsive and user-focused web application that brings the concept of truck services to life. I designed and developed the front end with attention to performance, accessibility, and a seamless user experience across all devices.",
+    isWhite: true,
+    link: "https://trucks-services.vercel.app/",
+    tags: ["Html", "Tailwind", "TypeScript"],
+  },
 ];
