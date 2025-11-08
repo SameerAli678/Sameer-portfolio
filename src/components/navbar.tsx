@@ -31,7 +31,7 @@ const Navbar = () => {
           </p>
         ))}
       </div>
-      <a href="/cv/Sameer-ali-cv.pdf" download data-aos="flip-left">
+      <a href="/cv/Sameer_Ali_CV.pdf" download data-aos="flip-left">
         <Button text="Sameer Ali CV" icon={Arrow} />
       </a>
     </nav>
