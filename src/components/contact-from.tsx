@@ -49,12 +49,12 @@ const ContactFrom = () => {
   const { values, errors, handleSubmit, handleChange, touched, resetForm } =
     formik;
   return (
-    <div className="grid grid-cols-1 bg-white text-black w-full max-w-5xl sm:px-3 rounded-3xl gap-y-3 px-2 py-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+    <div className="grid w-full max-w-5xl grid-cols-1 px-2 py-6 text-black bg-white sm:px-3 rounded-3xl gap-y-3">
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
         {ContactFormData.map((item, i) => (
           <div
             key={i}
-            className={`${item.type == "email" ? `md:!col-span-2` : ``}`}
+            className={`${item.type == "email" ? `sm:!col-span-2` : ``}`}
             data-aos="fade-down"
             data-aos-delay={i * 500}
           >
