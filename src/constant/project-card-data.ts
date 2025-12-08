@@ -1,22 +1,41 @@
 export const ProjectCardData = [
   {
+    projectUrl: "https://haiger.vercel.app/",
+    heading: "Haiger Engineering",
+    title: "Company Website",
+    Paragraph:
+      "Haiger Engineering is a project that highlights my practical understanding of electrical systems and technical precision. I focused on creating efficient, reliable, and performance-driven solutions that reflect real-world engineering standards. Through this project, I worked on optimizing power flow, improving system control, and ensuring consistent results. It represents my ability to combine technical knowledge with problem-solving to deliver strong, well-structured outcomes.",
+    link: "https://haiger.vercel.app/",
+    tags: ["Next.js", "Tailwind", "TypeScript"],
+  },
+  {
     projectUrl: "https://sansa-shopping-app.vercel.app/",
     heading: "Sansa Project",
     title: "E-Commerce",
+    isWhite: true,
     Paragraph:
       "A stylish shopping web app with seamless navigation and dynamic product displays.",
     link: "https://sansa-shopping-app.vercel.app/",
     tags: ["Next.js", "Tailwind", "TypeScript"],
   },
   {
-    projectUrl: "https://haiger.vercel.app/",
-    heading: "Haiger Engineering",
-    title: "Company Website",
+    projectUrl: "https://trucks-services.vercel.app/",
+    heading: "Truck Services",
+    title: "Service Website",
     Paragraph:
-      "A professional company profile showcasing engineering expertise with a clean UI.",
+      "A fully responsive and user-focused web application that brings the concept of truck services to life. I designed and developed the front end with attention to performance, accessibility, and a seamless user experience across all devices.",
+    link: "https://trucks-services.vercel.app/",
+    tags: ["Html", "Tailwind", "TypeScript"],
+  },
+  {
+    projectUrl: "https://the-box-ochre.vercel.app/",
+    heading: "The Box",
+    title: "State agency Website",
+    Paragraph:
+      "This project showcases a clean and well-structured interface built with a focus on modern UI patterns and smooth responsiveness. Each section is organized for clarity, ensuring users can navigate effortlessly across the site. The layout, spacing, and visual consistency highlight strong attention to detail and front-end design principles. Overall, it reflects practical skills in creating polished, user-centered web experiences suitable for real-world use.",
     isWhite: true,
-    link: "https://haiger.vercel.app/",
-    tags: ["Next.js", "Tailwind", "TypeScript"],
+    link: "https://the-box-ochre.vercel.app/",
+    tags: ["Html", "Tailwind", "bootstrap", "TypeScript"],
   },
   {
     projectUrl: "https://sameerali678.github.io/Dapixel/",
@@ -26,25 +45,6 @@ export const ProjectCardData = [
       "Dapixel is a modern and responsive digital agency website built with HTML and Tailwind CSS , It features a clean UI, smooth scrolling. Ideal for showcasing creative services or portfolio projects.",
     link: "https://sameerali678.github.io/Dapixel/",
     tags: ["Html", "Tailwind"],
-  },
-  {
-    projectUrl: "https://trucks-services.vercel.app/",
-    heading: "Truck Services",
-    title: "Service Website",
-    Paragraph:
-      "A fully responsive and user-focused web application that brings the concept of truck services to life. I designed and developed the front end with attention to performance, accessibility, and a seamless user experience across all devices.",
-    isWhite: true,
-    link: "https://trucks-services.vercel.app/",
-    tags: ["Html", "Tailwind", "TypeScript"],
-  },
-  {
-    projectUrl: "https://sameerali678.github.io/Counter/",
-    heading: "Counter App",
-    title: "Application",
-    Paragraph:
-      "A simple and interactive counter app built using HTML, CSS, and JavaScript — with increment, decrement, and reset functionality.",
-    link: "https://sameerali678.github.io/Counter/",
-    tags: ["Html", "Tailwind", "JavaScript"],
   },
   {
     projectUrl: "https://sameerali678.github.io/Digital-Watch/",
@@ -57,11 +57,21 @@ export const ProjectCardData = [
     tags: ["Html", "Tailwind", "JavaScript"],
   },
   {
+    projectUrl: "https://sameerali678.github.io/Counter/",
+    heading: "Counter App",
+    title: "Application",
+    Paragraph:
+      "A simple and interactive counter app built using HTML, CSS, and JavaScript — with increment, decrement, and reset functionality.",
+    link: "https://sameerali678.github.io/Counter/",
+    tags: ["Html", "Tailwind", "JavaScript"],
+  },
+  {
     projectUrl: "https://sameerali678.github.io/Todo-list/",
     heading: "Todo List App",
     title: "Application",
     Paragraph:
       "A minimalistic Todo List app showcasing task management functionality with smooth user experience and clean UI using pure JavaScript.",
+    isWhite: true,
     link: "https://sameerali678.github.io/Todo-list/",
     tags: ["Html", "Tailwind", "JavaScript"],
   },
