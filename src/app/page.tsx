@@ -1,3 +1,4 @@
+// src/app/page.tsx
 "use client";
 import About from "@/components/about";
 import ProjectCard from "@/components/project-card";
